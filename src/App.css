@@ -1,0 +1,133 @@
+body {
+  background-color: #f4f4f4 !important;
+  font-family: "Merriweather", serif;
+}
+.logo img {
+  height: 20vh;
+}
+.navbar {
+  background-color: transparent !important;
+}
+.nav {
+  width: 100%;
+}
+.nav__text {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+.home__section {
+  display: flex;
+  flex-direction: column;
+}
+.bighero {
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__container {
+  display: flex;
+  flex-direction: row-reverse;
+
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bighero__background {
+  position: absolute;
+  z-index: -1;
+
+}
+
+.bighero__cuadrado{
+    border-radius: 2.3125rem;
+    background: rgba(255, 225, 148, 0.25);
+    margin: 2% 0%;
+backdrop-filter: blur(15px);
+display: flex;
+    height: 50vh;
+    width: 92%;
+    align-items: center;
+    flex-direction: row;
+  
+    justify-content: space-between;
+}
+
+
+.bighero__cuadrado img{
+    width: 100vh;
+}
+h1 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+}
+.bighero__text {
+  margin: 0% 5%;
+}
+.card__section {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+li {
+  list-style: none;
+}
+.card {
+  margin: 2%;
+}
+.card-body {
+  display: flex;
+  justify-content: space-around;
+}
+.detalle {
+    color: #000;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.detalle__img img{
+    margin: 2%;
+    height: 60vh;
+}
+.detalle__text p{
+    width: 50vw;
+}
+strong{
+    font-size: 30px;
+}
+.detalle__price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tabla{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68vh;
+  flex-direction: column;
+
+}
+.tabla img{
+  height: 20vh;
+}
+.tabla__secction{
+  display: flex;
+  justify-content: space-around;
+  width: 100vh;
+  align-items: center;
+  height: auto;
+}
+.detalle__total{
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10%;
+  align-items: center;
+  font-size: 30px
+}
