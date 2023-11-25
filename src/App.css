@@ -19,6 +19,7 @@ body {
   justify-content: flex-start;
   width: 100%;
   flex-direction: row-reverse;
+  align-items: center;
 }
 .home__section {
   display: flex;
@@ -92,6 +93,7 @@ li {
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
+    height: 100vh;
 }
 .detalle__img img{
     margin: 2%;
@@ -114,6 +116,8 @@ strong{
   justify-content: space-between;
   height: 68vh;
   flex-direction: column;
+  margin-top: 8%;
+
 
 }
 .tabla img{
@@ -157,5 +161,11 @@ strong{
 }
 .offcanva__table .detalle__total{
   justify-content: center;
+
+}
+.badge span{
+  border-radius: 100%;
+  display: flex;
+
 
 }
