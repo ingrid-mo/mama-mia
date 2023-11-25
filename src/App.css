@@ -43,6 +43,8 @@ body {
 .bighero__background {
   position: absolute;
   z-index: -1;
+  width: 99vw;
+
 
 }
 
@@ -167,5 +169,17 @@ strong{
   border-radius: 100%;
   display: flex;
 
+
+}
+.page404{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #262626;
+}
+.page404 img{
+  height: 63vh;
+  width: 50vw;
 
 }

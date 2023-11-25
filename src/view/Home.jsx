@@ -14,7 +14,7 @@ console.log("hola soy piza" + pizza)
         <div className="bighero">
           <div className="bighero__background">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/weather-7f851.appspot.com/o/Wireframe%20-%201%20(5).png?alt=media&token=f8254a99-af76-4393-a14b-24ff424d51ed"
+              src="https://firebasestorage.googleapis.com/v0/b/weather-7f851.appspot.com/o/Wireframe%20-%201%20(6).png?alt=media&token=23c55614-481f-4d45-a772-83679dd9b696"
               alt=""
             />
           </div >
