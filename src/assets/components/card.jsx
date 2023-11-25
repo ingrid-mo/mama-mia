@@ -55,7 +55,7 @@ const CardPizza = ({ key, name, price, ingredientes, img, pizza }) => {
           Ver más
         </Button>
         <Button variant="danger" onClick={agregarCarro}>
-          agregarCarro
+          Agregar Carro
         </Button>
         
       </Card.Body>
