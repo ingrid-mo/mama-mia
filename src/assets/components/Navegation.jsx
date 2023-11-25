@@ -32,7 +32,7 @@ const Navegacion = () => {
   console.log('PRECIOOOOOOOOOOOOOOOOOOOOOOO' +  precioTotal );
 
   return (
-    <Navbar className='navbar' bg='dark' data-bs-theme='dark'>
+    <Navbar className='navbar__section' bg='dark' data-bs-theme='dark'>
       <Container className='navbar__container'>
         <Navbar.Brand href='#home' className='logo'>
           <img src='https://firebasestorage.googleapis.com/v0/b/weather-7f851.appspot.com/o/Group%2060.png?alt=media&token=caf90c15-856f-4d94-a71b-587c6df6f04a' alt='mamamia-logo' />
