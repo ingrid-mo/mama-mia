@@ -33,9 +33,7 @@ const ContextProvider = ({ children }) => {
     getImage();
   }, []); 
 console.log(pizza)
-useEffect(() => {
-  // Evita hacer algo que cause una actualización infinita aquí
-}, [precioTotal]); // Asegúrate de que la dependencia sea correcta
+
 
 
   return (

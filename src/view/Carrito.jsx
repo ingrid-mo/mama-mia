@@ -3,10 +3,10 @@ import { ContexApi } from "../assets/context/ContextApi";
 import Button from "react-bootstrap/Button";
 
 const Carrito = () => {
-  const { carrito, setCarrito } = useContext(ContexApi);
+  const { carrito } = useContext(ContexApi);
   const [cantidades, setCantidades] = useState(
     carrito.reduce((acc, item) => {
-      acc[item.id] = 1;
+      acc[item.id] = 1; // Inicializar todas las cantidades a 1 por defecto
       return acc;
     }, {})
   );
@@ -16,14 +16,6 @@ const Carrito = () => {
       ...prevCantidades,
       [id]: (prevCantidades[id] || 0) + 1,
     }));
-
-    setCarrito((prevCarrito) =>
-      prevCarrito.map((item) =>
-        item.id === id
-          ? { ...item, price: item.price + item.price } // Actualizar el precio del item
-          : item
-      )
-    );
   };
 
   const handleDecrement = (id) => {
@@ -32,21 +24,10 @@ const Carrito = () => {
         ...prevCantidades,
         [id]: prevCantidades[id] - 1,
       }));
-
-      setCarrito((prevCarrito) =>
-        prevCarrito.map((item) =>
-          item.id === id
-            ? { ...item, price: item.price - item.price } // Actualizar el precio del item
-            : item
-        )
-      );
     }
   };
 
-  const total = carrito.reduce(
-    (acc, item) => acc + item.price * cantidades[item.id],
-    0
-  );
+  const total = carrito.reduce((acc, item) => acc + item.price * cantidades[item.id], 0);
 
   return (
     <>
@@ -60,12 +41,12 @@ const Carrito = () => {
               <Button variant="primary" onClick={() => handleDecrement(item.id)}>
                 -
               </Button>
-     
+          
               <p>{cantidades[item.id]}</p>
               <Button variant="danger" onClick={() => handleIncrement(item.id)}>
                 +
               </Button>
-            
+         
             </div>
           ))}
         </div>
