@@ -5,9 +5,23 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { ContexApi } from '../context/ContextApi';
-
+import ModalCarrito from './Modal';
+import { useState } from 'react';
 const Navegacion = () => {
+  
   const { precioTotal } = useContext(ContexApi);
+  const [showModal, setShowModal] = useState(false);
+
+  
+
+  const handleCartButtonClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
 
   const setActiveClass = ({ isActive }) =>
     isActive
@@ -25,17 +39,18 @@ const Navegacion = () => {
         </Navbar.Brand>
 
         <Nav className='me-auto'>
-          <div className='nav__text'>
-            <NavLink to='/' className={setActiveClass}>
-              Home
-            </NavLink>
-            <NavLink to='/Carrito' className={setActiveClass}>
-              <FaShoppingCart />
-            
-            </NavLink>
-          </div>
-        </Nav>
+        <div className='nav__text'>
+          <NavLink to='/' className={setActiveClass}>
+            Home
+          </NavLink>
+          <NavLink  className={setActiveClass} onClick={handleCartButtonClick}>
+            <FaShoppingCart />
+          </NavLink>
+        </div>
+      </Nav>
+      
       </Container>
+      <ModalCarrito show={showModal} onHide={handleCloseModal} /* Otros props según tu implementación */ />
     </Navbar>
   );
 };
