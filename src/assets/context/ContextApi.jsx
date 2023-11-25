@@ -1,9 +1,13 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const ContexApi = createContext();
 
 const ContextProvider = ({ children }) => {
+
+  const navigate = useNavigate();
+
   const [pizza, setIPizza] = useState([]);
   const [carrito, setCarrito] = useState([]);
   const [seleccionado, setSeleccionado] = useState([]);
@@ -27,6 +31,7 @@ const ContextProvider = ({ children }) => {
        catch (err) {
         
         console.log("Error al obtener datos del json:", err);
+        navigate("/NotFound");
       }
     };
 

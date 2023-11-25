@@ -15,17 +15,18 @@ const ModalCarrito = ({ show, onHide }) => {
     return (
         <>
         
-          <Offcanvas show={show} onHide={onHide} animation="slide-in-left">
+          <Offcanvas show={show} onHide={onHide} animation="slide-in-left" backdropClassName='offcanva'>
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>Tu pedido</Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body>
+            <Offcanvas.Body className='offcanva__table'>
            <Carrito/>
-           <Button variant="primary" onClick={irCarro
+           
+            </Offcanvas.Body>
+            <Button variant="primary" onClick={irCarro
            }>
             ver carrito 
           </Button >
-            </Offcanvas.Body>
           </Offcanvas>
           
         </>

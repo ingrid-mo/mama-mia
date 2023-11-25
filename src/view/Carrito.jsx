@@ -38,14 +38,16 @@ const Carrito = () => {
             <div key={index} className="tabla__secction">
               <img src={item.img} alt="" />
               <p>$ {item.price}</p>
-              <Button variant="primary" onClick={() => handleDecrement(item.id)}>
+              <div className="tabla__button">
+                <Button variant="primary" onClick={() => handleDecrement(item.id)}>
                 -
               </Button>
           
               <p>{cantidades[item.id]}</p>
               <Button variant="danger" onClick={() => handleIncrement(item.id)}>
                 +
-              </Button>
+              </Button></div>
+              
          
             </div>
           ))}

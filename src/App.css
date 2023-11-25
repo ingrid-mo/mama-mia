@@ -3,10 +3,11 @@ body {
   font-family: "Merriweather", serif;
 }
 .logo img {
-  height: 20vh;
+  height: 10vh;
 }
 .navbar {
-  background-color: transparent !important;
+position: fixed;
+
 }
 .nav {
   width: 100%;
@@ -114,12 +115,12 @@ strong{
 
 }
 .tabla img{
-  height: 20vh;
+  height: 10vh;
 }
 .tabla__secction{
   display: flex;
   justify-content: space-around;
-  width: 100vh;
+  width: 70vh;
   align-items: center;
   height: auto;
 }
@@ -131,16 +132,28 @@ strong{
   align-items: center;
   font-size: 30px
 }
-@keyframes slide-in-left {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
+.tabla__button{
 
-/* Aplica la animación al modal */
-.modal-dialog {
-  animation: slide-in-left 0.3s ease-out;
+  display: flex;
+    align-items: center;
+    width: 7vw;
+    height: 5vh;
+    gap: 5%;
+    text-align: center;
+}
+.offcanva__table{
+  display: flex;
+  justify-content: space-evenly;
+  width: 65vh;
+  align-items: center;
+  height: auto;
+  align-content: space-around;
+
+}
+.offcanva__table h3 {
+  display: none;
+}
+.offcanva__table .detalle__total{
+  justify-content: center;
+
 }
